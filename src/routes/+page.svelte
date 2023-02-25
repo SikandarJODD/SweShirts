@@ -2,7 +2,8 @@
 
 <svelte:head>
 	<title>Sweart Shirts</title>
-	<meta name="description" content="Sweatshirts For Men" />
+	<meta name="description" content="Cool Sweatshirts For Youth, High Quality T-Shirts  " />
+
 	<meta
 		name="og:image"
 		itemprop="image"
