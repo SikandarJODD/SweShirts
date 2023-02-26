@@ -12,7 +12,7 @@
 		address: ''
 	};
 	let handleform = async () => {
-		console.log(smalldata);
+		// console.log(smalldata);
 		const { data, error } = await supabase.from('sweatshirtsData').insert([
 			{
 				fullname: smalldata.fullname,
@@ -33,15 +33,15 @@
 	onMount(async () => {
 		let { data, error } = await supabase.from('sweatshirtsData').select('*');
 		shirtdata = data;
-		console.table(shirtdata);
+		// console.table(shirtdata);
 	});
 	let value = 0;
 	let activeToast = () => {
 		value = 1;
 		setTimeout(() => {
-			value = 0;
 			smalldata.fullname = '';
-		}, 3000);
+			value = 0;
+		}, 3500);
 	};
 </script>
 
@@ -65,6 +65,7 @@
 					>Full Name</label
 				>
 				<input
+					required
 					name="full-name"
 					bind:value={smalldata.fullname}
 					class="w-full bg-gray-900 text-blue-400 border focus:border-2 focus:border-sky-500 rounded outline-none transition duration-100 px-3 py-2"
@@ -76,6 +77,7 @@
 					>Quantity</label
 				>
 				<input
+					required
 					bind:value={smalldata.quantity}
 					name="quantity"
 					class="w-full bg-gray-900 text-blue-400 border focus:border-2 focus:border-sky-500 rounded outline-none transition duration-100 px-3 py-2"
@@ -85,6 +87,7 @@
 			<div>
 				<label for="size" class="inline-block text-slate-300 text-sm sm:text-base mb-2">Size</label>
 				<input
+					required
 					bind:value={smalldata.size}
 					name="size"
 					class="w-full bg-gray-900 text-blue-400 border focus:border-2 focus:border-sky-500 rounded outline-none transition duration-100 px-3 py-2"
@@ -96,6 +99,7 @@
 					>Email</label
 				>
 				<input
+					required
 					bind:value={smalldata.email}
 					name="email"
 					class="w-full bg-gray-900 text-blue-400 border focus:border-2 focus:border-sky-500 rounded outline-none transition duration-100 px-3 py-2"
@@ -109,6 +113,7 @@
 				<select
 					class="select select-success w-full max-w-xs transition duration-100 px-3 py-2"
 					bind:value={smalldata.selectSweat}
+					required
 				>
 					<option disabled selected>Pick your favorite Sweatshirt</option>
 					<option value="Drippy Drill">Drippy Drill</option>
@@ -127,6 +132,7 @@
 					>Address</label
 				>
 				<textarea
+					required
 					bind:value={smalldata.address}
 					name="address"
 					class="w-full h-64 bg-gray-900 text-sky-500 border focus:border-2 focus:border-sky-500 rounded outline-none transition duration-100 px-3 py-2"
@@ -146,13 +152,15 @@
 	</div>
 </div>
 
-{#if value}
-	<div class="toast">
+{#if value == 1 && smalldata.fullname != ''}
+	<div class="toast toast-top toast-end md:toast-end md:toast-bottom">
 		<div class="alert alert-success">
 			<div>
 				<span
-					>Dear <strong>{smalldata.fullname}</strong> Order is Placed, Will be Deliver Soon in 2 Days</span
-				>
+					>Dear <strong>{smalldata.fullname}</strong> Order is Placed, Will Be Delivered in 2 Days
+					<br />
+					<i>Thankyou for Shopping with us</i>
+				</span>
 			</div>
 		</div>
 	</div>

@@ -12,6 +12,14 @@
 	import Img6 from '$lib/img6.jpg';
 	import Img7 from '$lib/img7.jpg';
 	import Img8 from '$lib/img8.jpg';
+	import Img9 from '$lib/images/img1.jpg';
+	import Img10 from '$lib/images/img2.jpg';
+	import Img11 from '$lib/images/img3.jpg';
+	import Img12 from '$lib/images/img4.jpg';
+	import Img13 from '$lib/images/img5.jpg';
+	import Img14 from '$lib/images/img6.jpg';
+	import Img15 from '$lib/images/img7.jpg';
+	import Img16 from '$lib/images/img8.jpg';
 	let data = [
 		{
 			id: 1,
@@ -59,6 +67,54 @@
 			id: 8,
 			title: 'Japanese Hoddie',
 			imgSrc: Img8,
+			price: 1500
+		},
+		{
+			id: 9,
+			title: 'Sunny Cool',
+			imgSrc: Img9,
+			price: 1500
+		},
+		{
+			id: 10,
+			title: 'Uchia Legacy',
+			imgSrc: Img10,
+			price: 1500
+		},
+		{
+			id: 11,
+			title: 'Pupmkin Fuffy',
+			imgSrc: Img11,
+			price: 1500
+		},
+		{
+			id: 12,
+			title: 'Loner Wolf',
+			imgSrc: Img12,
+			price: 1500
+		},
+		{
+			id: 13,
+			title: 'Peace Hills',
+			imgSrc: Img13,
+			price: 1500
+		},
+		{
+			id: 14,
+			title: 'Anime Pop',
+			imgSrc: Img14,
+			price: 1500
+		},
+		{
+			id: 15,
+			title: 'Anyna Cuffy',
+			imgSrc: Img15,
+			price: 1500
+		},
+		{
+			id: 16,
+			title: 'Goku Blast',
+			imgSrc: Img16,
 			price: 1500
 		}
 	];
