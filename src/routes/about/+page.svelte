@@ -1,1 +1,3 @@
-<h1>About Page</h1>
+<s-head>
+	<title>About Us</title>
+</s-head>

@@ -1,12 +1,70 @@
 <script>
 	import { page } from '$app/stores';
+	$: RouteId = $page.params.productId;
+	$: overAll = RouteId + 1;
+	$: console.log(RouteId);
+
 	import Img1 from '$lib/img1.jpg';
+	import Img2 from '$lib/img2.jpg';
+	import Img3 from '$lib/img3.jpg';
+	import Img4 from '$lib/img4.jpg';
+	import Img5 from '$lib/img5.jpg';
+	import Img6 from '$lib/img6.jpg';
+	import Img7 from '$lib/img7.jpg';
+	import Img8 from '$lib/img8.jpg';
+	let data = [
+		{
+			id: 1,
+			title: 'Drippy Drill',
+			imgSrc: Img1,
+			price: 1500
+		},
+		{
+			id: 2,
+			title: 'Fusion Cofii',
+			imgSrc: Img2,
+			price: 1500
+		},
+		{
+			id: 3,
+			title: 'Fusion Spark',
+			imgSrc: Img3,
+			price: 1500
+		},
+		{
+			id: 4,
+			title: 'Fuzzy Lofi',
+			imgSrc: Img4,
+			price: 1500
+		},
+		{
+			id: 5,
+			title: 'Classic Fuzzy',
+			imgSrc: Img5,
+			price: 1500
+		},
+		{
+			id: 6,
+			title: 'Thik Art',
+			imgSrc: Img6,
+			price: 1500
+		},
+		{
+			id: 7,
+			title: 'Clean Flean',
+			imgSrc: Img7,
+			price: 1500
+		},
+		{
+			id: 8,
+			title: 'Japanese Hoddie',
+			imgSrc: Img8,
+			price: 1500
+		}
+	];
 </script>
 
-<s-head>
-	<title>Products </title>
-</s-head>
-<div class=" py-6 sm:py-8 lg:py-12 ">
+<div class=" py-6 sm:py-8 lg:py-12 mb-20">
 	<div class="max-w-screen-xl px-4 md:px-8 mx-auto">
 		<div class="grid md:grid-cols-2 gap-8">
 			<!-- images - start -->
@@ -14,9 +72,9 @@
 				<div class="lg:col-span-4 bg-gray-100 rounded-lg overflow-hidden relative">
 					<!-- svelte-ignore a11y-img-redundant-alt -->
 					<img
-						src={Img1}
+						src={data[RouteId - 1].imgSrc}
 						loading="lazy"
-						alt="Drippy Drill Img"
+						alt="Photo by Himanshu Dewangan"
 						class="w-full h-full object-cover object-center"
 					/>
 
@@ -33,7 +91,7 @@
 				<!-- name - start -->
 				<div class="mb-2 md:mb-3">
 					<span class="inline-block text-sky-500 mb-0.5">Fusion XD</span>
-					<h2 class="text-sky-400 text-2xl lg:text-3xl font-bold">Fusion Spark</h2>
+					<h2 class="text-sky-400 text-2xl lg:text-3xl font-bold">{data[RouteId - 1].title}</h2>
 				</div>
 				<!-- name - end -->
 
@@ -59,7 +117,7 @@
 				<!-- rating - end -->
 
 				<!-- size - start -->
-				<div class="mb-8 md:mb-10">
+				<div class="mb-8 md:mb-10 hidden md:flex">
 					<span class="inline-block text-gray-500 text-sm md:text-base font-semibold mb-3"
 						>Size</span
 					>
@@ -96,8 +154,9 @@
 				<!-- price - start -->
 				<div class="mb-4">
 					<div class="flex items-end gap-2">
-						<span class="text-sky-400 text-xl md:text-2xl font-bold">Rs 1000.00</span>
-						<span class="text-red-300 line-through mb-0.5">Rs 1300.00</span>
+						<span class="text-sky-400 text-xl md:text-2xl font-bold">{data[RouteId - 1].price}</span
+						>
+						<span class="text-red-300 line-through mb-0.5">Rs 1800.00</span>
 					</div>
 
 					<span class="text-gray-500 text-sm">incl. VAT plus shipping</span>

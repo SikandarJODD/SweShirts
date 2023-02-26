@@ -1,5 +1,6 @@
 <script>
 	import PageHero from '$lib/PageHero.svelte';
+	import PageDown from '../lib/PageDown.svelte';
 	import ProductSub from '../lib/ProductSub.svelte';
 	let value = 23;
 </script>
@@ -23,6 +24,7 @@
 <main>
 	<PageHero />
 	<ProductSub />
+	<PageDown />
 	<!-- <h1 class="text-3xl font-bold text-center text-slate-200">Fusion XD</h1> -->
 </main>
 
