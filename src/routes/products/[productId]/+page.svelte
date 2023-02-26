@@ -117,8 +117,9 @@
 				<!-- rating - end -->
 
 				<!-- size - start -->
-				<div class="mb-8 md:mb-10 hidden md:flex">
-					<span class="inline-block text-gray-500 text-sm md:text-base font-semibold mb-3"
+				<div class="mb-8 md:mb-10 hidden md:flex align-middle">
+					<span
+						class="inline-block text-gray-500 text-sm md:text-base font-semibold mb-3 mx-3 align-middle"
 						>Size</span
 					>
 
@@ -154,7 +155,8 @@
 				<!-- price - start -->
 				<div class="mb-4">
 					<div class="flex items-end gap-2">
-						<span class="text-sky-400 text-xl md:text-2xl font-bold">{data[RouteId - 1].price}</span
+						<span class="text-sky-400 text-xl md:text-2xl font-bold"
+							>Rs {data[RouteId - 1].price}.00</span
 						>
 						<span class="text-red-300 line-through mb-0.5">Rs 1800.00</span>
 					</div>
@@ -188,13 +190,7 @@
 				<!-- buttons - start -->
 				<div class="flex gap-2.5">
 					<a
-						href="#"
-						class="inline-block flex-1 sm:flex-none bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
-						>Add to cart</a
-					>
-
-					<a
-						href="#"
+						href="/#formData"
 						class="inline-block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
 						>Buy now</a
 					>

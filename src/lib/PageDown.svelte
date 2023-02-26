@@ -1,16 +1,51 @@
 <script>
-	let name = '';
-	let quantity = 1;
-	let email = '';
-	let size = '';
-	let selectSweat = '';
-	let address = '';
-	let handleform = () => {
-		console.log(name);
+	import { onMount } from 'svelte';
+
+	import supabase from '$lib/db.js';
+
+	let smalldata = {
+		fullname: '',
+		quantity: 1,
+		size: '',
+		email: '',
+		selectSweat: 'Pick your favorite Sweatshirt',
+		address: ''
+	};
+	let handleform = async () => {
+		console.log(smalldata);
+		const { data, error } = await supabase.from('sweatshirtsData').insert([
+			{
+				fullname: smalldata.fullname,
+				quantity: smalldata.quantity,
+				size: smalldata.size,
+				email: smalldata.email,
+				selectSweat: smalldata.selectSweat,
+				address: smalldata.address
+			}
+		]);
+		smalldata.quantity = 1;
+		smalldata.size = '';
+		smalldata.email = '';
+		smalldata.selectSweat = 'Pick your favorite Sweatshirt';
+		smalldata.address = '';
+	};
+	let shirtdata = [];
+	onMount(async () => {
+		let { data, error } = await supabase.from('sweatshirtsData').select('*');
+		shirtdata = data;
+		console.table(shirtdata);
+	});
+	let value = 0;
+	let activeToast = () => {
+		value = 1;
+		setTimeout(() => {
+			value = 0;
+			smalldata.fullname = '';
+		}, 3000);
 	};
 </script>
 
-<div class=" py-6 sm:py-8 lg:py-12">
+<div class=" py-6 sm:py-8 lg:py-12" id="formData">
 	<div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
 		<!-- text - start -->
 		<div class="mb-10 md:mb-16">
@@ -31,7 +66,7 @@
 				>
 				<input
 					name="full-name"
-					bind:value={name}
+					bind:value={smalldata.fullname}
 					class="w-full bg-gray-900 text-blue-400 border focus:border-2 focus:border-sky-500 rounded outline-none transition duration-100 px-3 py-2"
 				/>
 			</div>
@@ -41,7 +76,7 @@
 					>Quantity</label
 				>
 				<input
-					bind:value={quantity}
+					bind:value={smalldata.quantity}
 					name="quantity"
 					class="w-full bg-gray-900 text-blue-400 border focus:border-2 focus:border-sky-500 rounded outline-none transition duration-100 px-3 py-2"
 				/>
@@ -50,7 +85,7 @@
 			<div>
 				<label for="size" class="inline-block text-slate-300 text-sm sm:text-base mb-2">Size</label>
 				<input
-					bind:value={size}
+					bind:value={smalldata.size}
 					name="size"
 					class="w-full bg-gray-900 text-blue-400 border focus:border-2 focus:border-sky-500 rounded outline-none transition duration-100 px-3 py-2"
 				/>
@@ -61,7 +96,7 @@
 					>Email</label
 				>
 				<input
-					bind:value={email}
+					bind:value={smalldata.email}
 					name="email"
 					class="w-full bg-gray-900 text-blue-400 border focus:border-2 focus:border-sky-500 rounded outline-none transition duration-100 px-3 py-2"
 				/>
@@ -73,9 +108,9 @@
 				>
 				<select
 					class="select select-success w-full max-w-xs transition duration-100 px-3 py-2"
-					bind:value={selectSweat}
+					bind:value={smalldata.selectSweat}
 				>
-					<option disabled selected>Pick your favorite anime</option>
+					<option disabled selected>Pick your favorite Sweatshirt</option>
 					<option value="Drippy Drill">Drippy Drill</option>
 					<option value="Fusion Cofii">Fusion Cofii</option>
 					<option value="Fusion Spark">Fusion Spark</option>
@@ -92,7 +127,7 @@
 					>Address</label
 				>
 				<textarea
-					bind:value={address}
+					bind:value={smalldata.address}
 					name="address"
 					class="w-full h-64 bg-gray-900 text-sky-500 border focus:border-2 focus:border-sky-500 rounded outline-none transition duration-100 px-3 py-2"
 				/>
@@ -101,6 +136,7 @@
 			<div class="sm:col-span-2 flex justify-between items-center">
 				<button
 					type="submit"
+					on:click={activeToast}
 					class="inline-block bg-sky-600 hover:bg-sky-800  text-white text-sm md:text-lg font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
 					>Send</button
 				>
@@ -109,3 +145,15 @@
 		<!-- form - end -->
 	</div>
 </div>
+
+{#if value}
+	<div class="toast">
+		<div class="alert alert-success">
+			<div>
+				<span
+					>Dear <strong>{smalldata.fullname}</strong> Order is Placed, Will be Deliver Soon in 2 Days</span
+				>
+			</div>
+		</div>
+	</div>
+{/if}
