@@ -1,4 +1,8 @@
-<h1 class="text-3xl font-bold text-center text-slate-200">Fusion XD</h1>
+<script>
+	import PageHero from '$lib/PageHero.svelte';
+	import ProductSub from '../lib/ProductSub.svelte';
+	let value = 23;
+</script>
 
 <svelte:head>
 	<title>Sweat Shirts</title>
@@ -15,6 +19,12 @@
 		content="https://cdn-icons-png.flaticon.com/512/7394/7394940.png"
 	/>
 </svelte:head>
+
+<main>
+	<PageHero />
+	<ProductSub />
+	<!-- <h1 class="text-3xl font-bold text-center text-slate-200">Fusion XD</h1> -->
+</main>
 
 <style lang="postcss">
 	:global(html) {
