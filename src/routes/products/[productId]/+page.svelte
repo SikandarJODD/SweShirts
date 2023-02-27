@@ -12,7 +12,7 @@
 	import Img6 from '$lib/img6.jpg';
 	import Img7 from '$lib/img7.jpg';
 	import Img8 from '$lib/img8.jpg';
-	import Img9 from '$lib/images/img1.jpg';
+	import Img9 from '$lib/images/img1.png';
 	import Img10 from '$lib/images/img2.jpg';
 	import Img11 from '$lib/images/img3.jpg';
 	import Img12 from '$lib/images/img4.jpg';
@@ -120,6 +120,7 @@
 	];
 </script>
 
+<!-- code  -->
 <div class=" py-6 sm:py-8 lg:py-12 mb-20">
 	<div class="max-w-screen-xl px-4 md:px-8 mx-auto">
 		<div class="grid md:grid-cols-2 gap-8">
