@@ -83,6 +83,7 @@
 		<p class="text-sm md:text-lg">Copyright © 2023 - All right reserved</p>
 	</div>
 	<div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end px-32 hidden md:grid">
+		<!-- svelte-ignore a11y-missing-attribute -->
 		<a
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -95,6 +96,7 @@
 				/></svg
 			>
 		</a>
+		<!-- svelte-ignore a11y-missing-attribute -->
 		<a
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -107,6 +109,7 @@
 				/></svg
 			></a
 		>
+		<!-- svelte-ignore a11y-missing-attribute -->
 		<a
 			><svg
 				xmlns="http://www.w3.org/2000/svg"

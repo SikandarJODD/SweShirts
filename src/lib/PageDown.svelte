@@ -71,7 +71,7 @@
 					class="w-full bg-gray-900 text-blue-400 border focus:border-2 focus:border-sky-500 rounded outline-none transition duration-100 px-3 py-2"
 				/>
 			</div>
-
+			<!-- code  -->
 			<div>
 				<label for="quantity" class="inline-block text-slate-300 text-sm sm:text-base mb-2"
 					>Quantity</label
