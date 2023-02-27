@@ -12,14 +12,14 @@
 	import Img6 from '$lib/img6.jpg';
 	import Img7 from '$lib/img7.jpg';
 	import Img8 from '$lib/img8.jpg';
-	import Img9 from '$lib/images/img1.png';
-	import Img10 from '$lib/images/img2.jpg';
-	import Img11 from '$lib/images/img3.jpg';
-	import Img12 from '$lib/images/img4.jpg';
-	import Img13 from '$lib/images/img5.jpg';
-	import Img14 from '$lib/images/img6.jpg';
-	import Img15 from '$lib/images/img7.jpg';
-	import Img16 from '$lib/images/img8.jpg';
+	import Img9 from '$lib/Images/img1.png';
+	import Img10 from '$lib/Images/img2.jpg';
+	import Img11 from '$lib/Images/img3.jpg';
+	import Img12 from '$lib/Images/img4.jpg';
+	import Img13 from '$lib/Images/img5.jpg';
+	import Img14 from '$lib/Images/img6.jpg';
+	import Img15 from '$lib/Images/img7.jpg';
+	import Img16 from '$lib/Images/img8.jpg';
 	let data = [
 		{
 			id: 1,
