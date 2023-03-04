@@ -121,6 +121,7 @@
 </script>
 
 <!-- code  -->
+
 <div class=" py-6 sm:py-8 lg:py-12 mb-20">
 	<div class="max-w-screen-xl px-4 md:px-8 mx-auto">
 		<div class="grid md:grid-cols-2 gap-8">
@@ -247,7 +248,7 @@
 				<!-- buttons - start -->
 				<div class="flex gap-2.5">
 					<a
-						href="/#formData"
+						href="/form/{data[RouteId - 1].id}"
 						class="inline-block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
 						>Buy now</a
 					>
