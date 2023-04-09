@@ -1,4 +1,8 @@
 <script>
+	import  supabase from '$lib/db.js';
+	import { onMount } from 'svelte';
+	$: dataObj=[];
+	
 	import Img1 from '$lib/Images/img1.png';
 	import Img2 from '$lib/Images/img2.jpg';
 	import Img3 from '$lib/Images/img3.jpg';
@@ -50,6 +54,10 @@
 			title: 'Anime Pop'
 		}
 	];
+	onMount(async () => {
+		const { data, error } = await supabase.from('swe-shirt-users').select('*');
+		dataObj = data;
+	});
 </script>
 
 <!-- Tiffu -->
@@ -60,6 +68,17 @@
 			{#each imgData as imgd}
 				<ImgMap imgName={imgd.imgName} title={imgd.title} id={imgd.id} />
 			{/each}
+			
+			<!-- person - end -->
+		</div>
+	</div>
+	<div class="max-w-screen-xl px-4 md:px-8 mx-auto mt-4">
+		<div class="grid grid-cols-2 md:grid-cols-3 gap-x-4 lg:gap-x-8 gap-y-8 lg:gap-y-12">
+			<!-- person - start -->
+			{#each dataObj as imgd, index}
+				<ImgMap imgName={imgd.img_url} title={imgd.shirt_title} id={index+imgData.length} />
+			{/each}
+			
 			<!-- person - end -->
 		</div>
 	</div>
