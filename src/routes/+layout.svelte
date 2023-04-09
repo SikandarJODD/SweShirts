@@ -2,6 +2,13 @@
 	import '../app.css';
 	import { page } from '$app/stores';
 	$: RouteId = $page.route.id;
+	import AOS from 'aos';
+	import 'aos/dist/aos.css';
+	import { onMount } from 'svelte';
+	onMount(()=>{
+		AOS.init();
+	})
+
 </script>
 
 <div class="navbar bg-base-100 hidden md:flex px-20  border-b-2 border-slate-300">
@@ -16,6 +23,7 @@
 		<ul class="menu menu-horizontal px-1">
 			<li><a href="/" class="mx-1">Home</a></li>
 			<li><a href="/products" class="mx-1">Products</a></li>
+			<li><a href="/upload" class="mx-1">Upload</a></li>
 			<li><a href="/about" class="mx-1">About Us</a></li>
 		</ul>
 	</div>
@@ -124,3 +132,12 @@
 		>
 	</div>
 </footer>
+
+<style>
+	[data-aos] {
+		visibility: hidden;
+	}
+	[data-aos].animated {
+		visibility: visible;
+	}
+</style>

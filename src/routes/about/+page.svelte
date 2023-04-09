@@ -1,3 +1,7 @@
+<script>
+	import Aboutcontent from '$lib/Aboutcontent.svelte';
+</script>
+
 <svelte:head>
 	<title>About Page</title>
 	<meta name="description" content="Cool Sweatshirts For Youth, High Quality T-Shirts  " />
@@ -96,3 +100,4 @@
 		</div>
 	</div>
 </div>
+<Aboutcontent />

@@ -19,7 +19,11 @@
 			</div>
 		</div>
 		<div class="flex flex-wrap m-4">
-			<div class="xl:w-1/4 md:w-1/2 p-4">
+			<div class="xl:w-1/4 md:w-1/2 p-4"
+			data-aos="fade-up"
+			data-aos-duration="600"
+			data-aos-easing="ease-out-back"
+			>
 				<div
 					class=" p-6 rounded-lg  border-2 border-white hover:scale-105 transition duration-200 hover:bg-sky-800"
 				>
@@ -34,7 +38,11 @@
 					<h2 class="text-2xl text-white font-medium title-font ">Drippy Drill</h2>
 				</div>
 			</div>
-			<div class="xl:w-1/4 md:w-1/2 p-4 ">
+			<div class="xl:w-1/4 md:w-1/2 p-4 "
+			data-aos="fade-up"
+			data-aos-duration="750"
+			data-aos-easing="ease-out-back"
+			>
 				<div
 					class=" p-6 rounded-lg  border-2 border-white hover:scale-105 transition duration-200 hover:bg-sky-800"
 				>
@@ -49,7 +57,9 @@
 					<h2 class="text-2xl text-white font-medium title-font ">Fusion Cofii</h2>
 				</div>
 			</div>
-			<div class="xl:w-1/4 md:w-1/2 p-4">
+			<div class="xl:w-1/4 md:w-1/2 p-4" data-aos="fade-up"
+			data-aos-duration="900"
+			data-aos-easing="ease-out-back">
 				<div
 					class="p-6 rounded-lg  border-2 border-white hover:scale-105 transition duration-200 hover:bg-sky-800"
 				>
@@ -64,7 +74,9 @@
 					<h2 class="text-2xl text-white font-medium title-font ">Fusion Spark</h2>
 				</div>
 			</div>
-			<div class="xl:w-1/4 md:w-1/2 p-4">
+			<div class="xl:w-1/4 md:w-1/2 p-4" data-aos="fade-up"
+			data-aos-duration="1050"
+			data-aos-easing="ease-out-back">
 				<div
 					class=" p-6 rounded-lg  border-2 border-white hover:scale-105 transition duration-200 hover:bg-sky-800"
 				>
@@ -85,7 +97,9 @@
 <section class="text-gray-600 body-font bg-gradient-to-b from-sky-900 text-center ">
 	<div class="container px-8 mx-auto ">
 		<div class="flex flex-wrap ">
-			<div class="xl:w-1/4 md:w-1/2 p-4">
+			<div class="xl:w-1/4 md:w-1/2 p-4" data-aos="fade-up"
+			data-aos-duration="500"
+			data-aos-easing="ease-out-back">
 				<div
 					class=" p-6 rounded-lg  border-2 border-white hover:scale-105 transition duration-200 hover:bg-sky-800"
 				>
@@ -100,7 +114,9 @@
 					<h2 class="text-2xl text-white font-medium title-font">Classic Fuzzy</h2>
 				</div>
 			</div>
-			<div class="xl:w-1/4 md:w-1/2 p-4 ">
+			<div class="xl:w-1/4 md:w-1/2 p-4 " data-aos="fade-up"
+			data-aos-duration="700"
+			data-aos-easing="ease-out-back">
 				<div
 					class=" p-6 rounded-lg  border-2 border-white hover:scale-105 transition duration-200 hover:bg-sky-800"
 				>
@@ -115,7 +131,9 @@
 					<h2 class="text-2xl text-white font-medium title-font ">Thick Art</h2>
 				</div>
 			</div>
-			<div class="xl:w-1/4 md:w-1/2 p-4 ">
+			<div class="xl:w-1/4 md:w-1/2 p-4 " data-aos="fade-up"
+			data-aos-duration="900"
+			data-aos-easing="ease-out-back">
 				<div
 					class=" p-6 rounded-lg  border-2 border-white hover:scale-105 transition duration-200 hover:bg-sky-800"
 				>
@@ -130,7 +148,9 @@
 					<h2 class="text-2xl text-white font-medium title-font ">Clean Flean</h2>
 				</div>
 			</div>
-			<div class="xl:w-1/4 md:w-1/2 p-4">
+			<div class="xl:w-1/4 md:w-1/2 p-4" data-aos="fade-up"
+			data-aos-duration="1000"
+			data-aos-easing="ease-out-back">
 				<div
 					class=" p-6 rounded-lg  border-2 border-white hover:scale-105 transition duration-200 hover:bg-sky-800"
 				>
