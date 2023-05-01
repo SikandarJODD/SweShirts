@@ -16,7 +16,7 @@
 				Fusion XD <span class="text-sky-400">SweatShirts</span>
 				<br class="hidden lg:inline-block" />
 			</h1>
-			<div class="mb-8 leading-relaxed hidden md:flex flex-col ">
+			<div class="mb-8 mt-5 leading-relaxed hidden md:flex flex-col ">
 				<h2 class="text-xl my-1">
 					<span class="badge badge-lg p-4 cursor-pointer hover:bg-slate-700">High Quality </span>
 				</h2>
@@ -25,32 +25,37 @@
 				</h2>
 				<div class="flex">
 					<h2 class="text-xl m-1">
-						<span class="badge badge-lg p-4 cursor-pointer badge-primary hover:bg-blue-600 hover:text-white"
+						<span
+							class="badge badge-lg p-4 cursor-pointer badge-primary hover:bg-blue-600 hover:text-white"
 							>Hoodies</span
 						>
 					</h2>
 					<h2 class="text-xl m-1">
-						<span class="badge badge-lg p-4  cursor-pointer badge-primary hover:bg-blue-600 hover:text-white"
+						<span
+							class="badge badge-lg p-4  cursor-pointer badge-primary hover:bg-blue-600 hover:text-white"
 							>Puff Print</span
 						>
 					</h2>
 					<h2 class="text-xl m-1">
-						<span class="badge badge-lg p-4 cursor-pointer badge-primary hover:bg-blue-600 hover:text-white"
+						<span
+							class="badge badge-lg p-4 cursor-pointer badge-primary hover:bg-blue-600 hover:text-white"
 							>Relaxed fit</span
 						>
 					</h2>
 				</div>
 				<h2 class="text-xl my-1">
-					<span class="badge badge-lg p-4 hover:bg-slate-700 cursor-pointer">Ribbed Cuffs & Hem</span>
+					<span class="badge badge-lg p-4 hover:bg-slate-700 cursor-pointer"
+						>Ribbed Cuffs & Hem</span
+					>
 				</h2>
 			</div>
-			<div class="flex justify-center">
+			<div class="flex justify-center align-middle items-center">
 				<button
-					class="inline-flex bg-transparent  text-white bg-indigo-500 border-2 border-sky-700 py-2 px-6 focus:outline-none hover:bg-sky-500 transition-all duration-150 rounded text-lg"
+					class="inline-flex bg-transparent px-6 py-3  rounded-md md:text-2xl text-white border-2 border-sky-700  focus:outline-none hover:bg-sky-500 transition-all duration-150 text-lg"
 					>Buy Now</button
 				>
 				<button
-					class="ml-4 inline-flex text-gray-700 hover:bg-sky-600 bg-gray-100 border-0 py-2 px-6 focus:outline-none duration-150 transition-all  rounded text-lg"
+					class="ml-4 inline-flex text-gray-700 px-6 py-3 align-middle text-2xl hover:bg-sky-600 bg-gray-100 border-0 hover:text-gray-900 focus:outline-none duration-150 transition-all  rounded-md"
 					>Products</button
 				>
 			</div>

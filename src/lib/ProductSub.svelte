@@ -18,7 +18,7 @@
 				</h1>
 			</div>
 		</div>
-		<div class="flex flex-wrap m-4">
+		<div class="flex flex-wrap m-4 ">
 			<div class="xl:w-1/4 md:w-1/2 p-4"
 			data-aos="fade-up"
 			data-aos-duration="600"
@@ -94,7 +94,7 @@
 		</div>
 	</div>
 </section>
-<section class="text-gray-600 body-font bg-gradient-to-b from-sky-900 text-center ">
+<section class="text-gray-600 body-font bg-gradient-to-b from-sky-900 text-center mb-10">
 	<div class="container px-8 mx-auto ">
 		<div class="flex flex-wrap ">
 			<div class="xl:w-1/4 md:w-1/2 p-4" data-aos="fade-up"
