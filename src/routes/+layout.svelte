@@ -86,13 +86,14 @@
 <div class="mt-3 md:px-0 md:mt-0">
 	<slot />
 </div>
-<footer class="footer items-center p-4 bg-neutral text-neutral-content flex md:grid">
+<footer
+	class="footer items-center p-4 bg-neutral text-neutral-content flex justify-center "
+>
 	<div class="items-center grid-flow-col md:px-32  mb-16 md:mb-0 ">
 		<img src="https://cdn-icons-png.flaticon.com/512/7394/7394940.png" alt="" width="40" />
 		<p class="text-sm md:text-lg">Copyright © 2023 - All right reserved</p>
 	</div>
-	<div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end px-32 hidden md:grid">
-		<!-- svelte-ignore a11y-missing-attribute -->
+	<!-- <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end px-32 hidden md:grid">
 		<a
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +106,6 @@
 				/></svg
 			>
 		</a>
-		<!-- svelte-ignore a11y-missing-attribute -->
 		<a
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +118,6 @@
 				/></svg
 			></a
 		>
-		<!-- svelte-ignore a11y-missing-attribute -->
 		<a
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +130,7 @@
 				/></svg
 			></a
 		>
-	</div>
+	</div> -->
 </footer>
 
 <style>
