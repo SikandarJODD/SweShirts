@@ -1,8 +1,8 @@
 <script>
-	import  supabase from '$lib/db.js';
+	import supabase from '$lib/db.js';
 	import { onMount } from 'svelte';
-	$: dataObj=[];
-	
+	$: dataObj = [];
+
 	import Img1 from '$lib/Images/img1.png';
 	import Img2 from '$lib/Images/img2.jpg';
 	import Img3 from '$lib/Images/img3.jpg';
@@ -66,9 +66,11 @@
 		<div class="grid grid-cols-2 md:grid-cols-3 gap-x-4 lg:gap-x-8 gap-y-8 lg:gap-y-12">
 			<!-- person - start -->
 			{#each imgData as imgd}
-				<ImgMap imgName={imgd.imgName} title={imgd.title} id={imgd.id} />
+				<a href="/products/{imgd.id}">
+					<ImgMap imgName={imgd.imgName} title={imgd.title} id={imgd.id} />
+				</a>
 			{/each}
-			
+
 			<!-- person - end -->
 		</div>
 	</div>
@@ -76,9 +78,11 @@
 		<div class="grid grid-cols-2 md:grid-cols-3 gap-x-4 lg:gap-x-8 gap-y-8 lg:gap-y-12">
 			<!-- person - start -->
 			{#each dataObj as imgd, index}
-				<ImgMap imgName={imgd.img_url} title={imgd.shirt_title} id={index+imgData.length} />
+				<a href="/products/{imgd.id}">
+					<ImgMap imgName={imgd.img_url} title={imgd.shirt_title} id={index + imgData.length} />
+				</a>
 			{/each}
-			
+
 			<!-- person - end -->
 		</div>
 	</div>

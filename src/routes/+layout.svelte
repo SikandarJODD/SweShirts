@@ -5,10 +5,10 @@
 	import AOS from 'aos';
 	import 'aos/dist/aos.css';
 	import { onMount } from 'svelte';
-	onMount(()=>{
+	import LogoImg from '$lib/jacket.png';
+	onMount(() => {
 		AOS.init();
-	})
-
+	});
 </script>
 
 <div class="navbar bg-base-100 hidden md:flex px-20  border-b-2 border-slate-300">
@@ -48,7 +48,7 @@
 	</a>
 	<a href="/products" class={RouteId == '/products' ? 'active text-info' : ' '}>
 		<button>
-			<svg
+			<!-- <svg
 				xmlns="http://www.w3.org/2000/svg"
 				class="h-5 w-5"
 				fill="none"
@@ -60,7 +60,8 @@
 					stroke-width="2"
 					d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
 				/></svg
-			>
+			> -->
+			<img src={LogoImg} alt="" width="30" />
 		</button>
 	</a>
 	<a href="/about" class={RouteId == '/about' ? 'active text-info' : ' '}>
